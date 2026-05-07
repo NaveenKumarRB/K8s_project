@@ -7,7 +7,7 @@ services:
       - "5000:5000"
 
   frontend:
-    build: ./frontend
+    build: ./Frontend
     container_name: node_frontend
     ports:
       - "3000:3000"
