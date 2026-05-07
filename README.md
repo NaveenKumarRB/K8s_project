@@ -1,98 +1,39 @@
-flask-node-docker-app/
-│
-├── frontend/
-│   ├── app.js
-│   ├── package.json
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   └── views/
-│       └── index.ejs
-│
-├── backend/
-│   ├── app.py
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── .dockerignore
-│
-├── docker-compose.yaml
-├── .gitignore
-└── README.md
-
-
-Commands to Run
-Build and Start Containers
-
-docker compose up --build
-
-![alt text](image-1.png)
-
-Access Application
-
-Frontend: http://localhost:3000
-![alt text](image.png)
-
-Backend:http://localhost:5000
-![alt text](image-2.png)
-
-Docker Hub Push
-
-![alt text](image-5.png)
-docker login
-
-Tag Images
-
-docker tag docker-backend naveenkumarrb/flask-backend:v1
-
-docker tag docker-frontend naveenkumarrb/node-frontend:v1
-
-
-![alt text](image-3.png)
-
-Push Images
-
-docker push naveenkumarrb/flask-backend:v1
-
-docker push naveenkumarrb/node-frontend:v1
-
-![alt text](image-4.png)
-
-GitHub Push
-
-
-Initialize Git
+minikube start
+![alt text](image-6.png)
+kubectl get nodes
+![alt text](image-7.png)
+kubectl apply -f k8s/
+![alt text](image-8.png)
+kubectl get pods
+![alt text](image-9.png)
+kubectl get svc
+![alt text](image-10.png)
 
 git init
-
-Add Files
-
 git add .
-
-Commit
-
-git commit -m "Initial commit"
-
-Add Remote Repo
-
-git remote add origin YOUR_GITHUB_REPO_LINK
-
-Push
-
+git commit -m "Kubernetes deployment with Minikube"
 git branch -M main
+git remote add origin https://github.com/NaveenKumarRB/K8s_project.git
 
 git push -u origin main
 
-
-# Flask + Node.js Docker Application
+# Flask + Node.js Kubernetes Deployment
 
 ## Technologies Used
 
 - Flask
 - Node.js
-- Express
 - Docker
-- Docker Compose
+- Kubernetes
+- Minikube
 
-## Run Project
+## Start Minikube
 
 ```bash
-docker compose up --build
+minikube start
+
+
+output
+![alt text](image-11.png)
+
+![alt text](image-12.png)
